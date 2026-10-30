@@ -1,0 +1,6 @@
+#fxRoot{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+#fxRoot .card{padding:20px}#fxRoot h3{margin-bottom:12px}
+.fx-row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.fx-row input{flex:1 1 110px;min-width:0;padding:10px 12px;border-radius:10px;border:1px solid var(--glass-border);background:var(--bg-2);color:var(--text)}
+.fx-list{list-style:none;display:grid;gap:6px;margin:10px 0}.fx-groc label{display:flex;gap:8px;align-items:center}
+.fx-badges{display:flex;flex-wrap:wrap;gap:8px}.fx-badge{padding:6px 12px;border-radius:999px;font-size:.85rem;border:1px solid var(--glass-border);opacity:.55}.fx-badge.on{opacity:1;border-color:var(--primary)}
+.fx-spark{width:100%;height:60px;color:var(--primary)}.fx-bar{margin:8px 0;font-size:.9rem}

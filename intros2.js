@@ -1,0 +1,20 @@
+(function(){
+function cv(){var el=document.getElementById('fpIntro'),c=document.createElement('canvas'),d=Math.min(window.devicePixelRatio||1,2);c.width=innerWidth*d;c.height=innerHeight*d;c.className='fpcv';el.insertBefore(c,el.querySelector('.stage'));var x=c.getContext('2d');x.scale(d,d);return{el:el,c:c,x:x,w:innerWidth,h:innerHeight}}
+function run(o,fn){var t0=performance.now();(function f(t){if(!o.el.isConnected||o.el.classList.contains('open'))return;fn((t-t0)/1000);requestAnimationFrame(f)})(t0)}
+var FX='<div class="flash"></div><div class="shock"></div><div class="shock o"></div>';
+FPINTROS.push(
+{ms:5700,html:'<div class="shk">'+FX+'<div class="wl">FIT<b>PULSE</b></div><div class="cds" style="top:470px">Hyperdrive engaged. Move with purpose.</div></div>',
+ init:function(){var o=cv(),x=o.x,W=o.w,H=o.h,S=[],i;for(i=0;i<420;i++)S.push({a:Math.random()*6.283,r:Math.random(),z:Math.random(),c:i%5?'#fff':(i%2?'#1FA2FF':'#FF7A1A')});
+  run(o,function(t){var sp=t<3.2?.004+.05*Math.pow(t/3.2,2.2):Math.max(.004,.05*(1-(t-3.2)*1.4)),cx=W/2,cy=H/2,R=Math.max(W,H)*.06;x.fillStyle='rgba(17,19,24,.28)';x.fillRect(0,0,W,H);
+  S.forEach(function(s){var z0=s.z;s.z-=sp;if(s.z<=.02){s.z=1;z0=1;s.a=Math.random()*6.283;s.r=Math.random()}var d0=s.r*R/z0*1.2,d1=s.r*R/s.z*1.2,c=Math.cos(s.a),n=Math.sin(s.a);x.strokeStyle=s.c;x.globalAlpha=Math.min(1,1.2-s.z);x.lineWidth=.6+(1-s.z)*2.4;x.beginPath();x.moveTo(cx+c*d0,cy+n*d0);x.lineTo(cx+c*d1,cy+n*d1);x.stroke()});x.globalAlpha=1})}},
+{ms:5800,html:'<div class="scan"></div><div class="term"><div style="animation-delay:.2s">&gt; BOOTING PULSE ENGINE ... OK</div><div style="animation-delay:.9s">&gt; SYNCING WATCH + DASHBOARD .. OK</div><div style="animation-delay:1.5s">&gt; LAUNCHING FITPULSE ...</div></div><div class="gl"><span class="gls" data-t="FITPULSE">FITPULSE</span></div><div class="cds" style="top:470px">Move with purpose</div>'},
+{ms:5800,html:'<div class="cds" style="top:600px;animation-delay:2.6s">Move with purpose</div>',
+ init:function(){var o=cv(),x=o.x,W=o.w,H=o.h,fs=Math.min(W/4.6,260),oc=document.createElement('canvas');oc.width=W;oc.height=Math.ceil(fs*1.3);var ox=oc.getContext('2d');ox.fillStyle='#fff';ox.font='800 '+fs+'px Manrope,Arial,sans-serif';ox.textAlign='center';ox.textBaseline='middle';var tw=ox.measureText('FITPULSE').width,fw=ox.measureText('FIT').width,x0=W/2-tw/2;ox.fillText('FITPULSE',W/2,oc.height/2);
+  var d=ox.getImageData(0,0,oc.width,oc.height).data,P=[],g=Math.max(4,Math.round(fs/46)),oy=H/2-oc.height/2-30,yy,xx,a,r;
+  for(yy=0;yy<oc.height;yy+=g)for(xx=0;xx<W;xx+=g)if(d[(yy*W+xx)*4+3]>128){a=Math.random()*6.283;r=Math.max(W,H)*(.6+Math.random()*.5);P.push({x:W/2+Math.cos(a)*r,y:H/2+Math.sin(a)*r,tx:xx,ty:yy+oy,vx:0,vy:0,c:xx<x0+fw?'#FF7A1A':'#1FA2FF',s:g*.75})}
+  var ex=0;run(o,function(t){x.fillStyle='rgba(17,19,24,.33)';x.fillRect(0,0,W,H);if(t>4.3&&!ex){ex=1;P.forEach(function(p){var an=Math.atan2(p.y-H/2,p.x-W/2)+(Math.random()-.5),v=8+Math.random()*22;p.vx=Math.cos(an)*v;p.vy=Math.sin(an)*v})}
+  P.forEach(function(p){if(!ex){p.vx=(p.vx+(p.tx-p.x)*.022)*.86;p.vy=(p.vy+(p.ty-p.y)*.022)*.86}p.x+=p.vx;p.y+=p.vy;x.fillStyle=p.c;x.fillRect(p.x,p.y,p.s,p.s)})})}},
+{ms:5600,html:'<div class="shk"><div class="tun">'+(function(){var s='',i;for(i=0;i<12;i++)s+='<i class="tr" style="--i:'+i+'"></i>';return s})()+'</div>'+FX+'<div class="wl">FIT<b>PULSE</b></div><div class="cds" style="top:470px">Break through.</div></div>'},
+{ms:5600,html:'<svg class="nf" width="1100" height="420" viewBox="0 0 1100 420" aria-hidden="true"><rect x="4" y="4" width="1092" height="412" rx="40"/></svg><div class="nn"><span style="--i:0;color:#FF7A1A">F</span><span style="--i:1;color:#FF7A1A">I</span><span style="--i:2;color:#FF7A1A">T</span><span style="--i:3;color:#1FA2FF">P</span><span style="--i:4;color:#1FA2FF">U</span><span style="--i:5;color:#1FA2FF">L</span><span style="--i:6;color:#1FA2FF">S</span><span style="--i:7;color:#1FA2FF">E</span></div><div class="cds" style="top:520px">Open all night. Move with purpose.</div>'}
+);
+})();
