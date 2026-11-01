@@ -30,7 +30,7 @@ body.dark:not(.on-landing), body.dark #app, body.dark #modalOverlay {
 body:not(.on-landing) { background: var(--bg); color: var(--text); }
 body:not(.on-landing)::before {
   display: block;
-  background: radial-gradient(ellipse at 82% 16%,rgba(184,213,117,.2),transparent 48%),radial-gradient(ellipse at 18% 88%,rgba(239,157,107,.10),transparent 42%);
+  background: radial-gradient(ellipse at 82% 16%,rgba(31,162,255,.2),transparent 48%),radial-gradient(ellipse at 18% 88%,rgba(255,122,26,.10),transparent 42%);
   animation: appAmbient 18s ease-in-out infinite alternate;
 }
 #app { grid-template-columns: 252px minmax(0,1fr); isolation: isolate; background: transparent; }
@@ -76,7 +76,7 @@ body.dark #app .topbar { background: rgba(20,23,17,.8); }
 #app .stat-icon.bg-orange { background:#ffe4d6;color:#b45027; }
 #app .stat-icon.bg-red { background:#fbe2d9;color:#bf5941; }
 #app .stat-icon.bg-blue { background:#deecf3;color:#3c7b96; }
-#app .stat-icon.bg-green { background:#e9f2cf;color:#658635; }
+#app .stat-icon.bg-green { background:#d6f3ff;color:#0b7fa0; }
 #app .stat-icon.bg-purple { background:#e9e4f3;color:#7e68a0; }
 #app .stat-icon.bg-pink { background:#f8e3da;color:#b56745; }
 #app .stat-icon.bg-yellow { background:#f7edcc;color:#967a27; }

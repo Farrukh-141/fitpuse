@@ -21,7 +21,7 @@ html { scroll-behavior:smooth; scroll-padding-top:92px; }
 .lp-btn-lg { padding:17px 25px;font-size:.85rem; }
 .lp-nav .lp-btn-volt { padding-inline:22px; }
 .lp-hero { padding-top:0;margin-top:0;overflow:hidden; }
-.lp-hero-bg { background:radial-gradient(ellipse at 75% 30%,#5b772510,transparent 55%);pointer-events:none; }
+.lp-hero-bg { background:radial-gradient(ellipse at 75% 30%,#1FA2FF10,transparent 55%);pointer-events:none; }
 .ambient-orb { position:absolute;filter:blur(80px);border-radius:50%;width:490px;height:490px;opacity:.12;animation:ambientDrift 18s ease-in-out infinite alternate; }
 .orb-one { right:-150px;top:30px;background:#b9de52; }
 .orb-two { left:0;bottom:-270px;background:#9f8a43;animation-delay:-8s;opacity:.08; }

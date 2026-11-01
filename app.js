@@ -1394,7 +1394,7 @@ function scheduleReminders() {
 /* ---------- Portable user backup ---------- */
 $("#exportDataBtn").onclick = () => {
   const recipeData = {saved:LS.get(`fp_recipe_saves_${state.current}`,[]),plans:LS.get(`fp_recipe_plans_${state.current}`,{})};
-  const payload = { app: "FitPulse", schemaVersion: 1, exportedAt: new Date().toISOString(), data: userData(), recipeData, ext: window.FPX?.dump() };
+  const payload = { app: "FitPulse", schemaVersion: 1, exportedAt: new Date().toISOString(), data: userData(), recipeData };
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
@@ -1417,7 +1417,6 @@ $("#importDataInput").onchange = async (event) => {
     if (!confirm("Importing this backup will replace the data for this account. Continue?")) return;
     Object.assign(state, { ...emptyUserData(), ...data });
     if (recipeData) { LS.set(`fp_recipe_saves_${state.current}`,recipeData.saved); LS.set(`fp_recipe_plans_${state.current}`,recipeData.plans); }
-    window.FPX?.load(parsed.ext);
     save();
     applyTheme();
     loadProfile();

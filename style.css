@@ -1124,7 +1124,7 @@ body {
   letter-spacing: -0.01em;
 }
 body::before {
-  background: radial-gradient(900px 520px at -10% -10%, rgba(64, 155, 104, .09), transparent 65%), radial-gradient(850px 520px at 110% 5%, rgba(240, 139, 99, .08), transparent 66%);
+  background: radial-gradient(900px 520px at -10% -10%, rgba(31,162,255, .09), transparent 65%), radial-gradient(850px 520px at 110% 5%, rgba(255,122,26, .08), transparent 66%);
 }
 body.dark {
   --bg: #101713;

@@ -8,18 +8,18 @@ body:not(.on-landing)::before { display:none; }
   overflow:hidden;
   contain:strict;
   isolation:isolate;
-  background:linear-gradient(145deg,#f2f5e8 0%,#eef2e4 42%,#f5f0e6 100%);
-  --atmo-green:124,166,62;
-  --atmo-lime:172,210,99;
-  --atmo-peach:226,155,106;
-  --atmo-line:111,143,70;
+  background:linear-gradient(145deg,#eef4fb 0%,#f1f5fa 42%,#f8f3ee 100%);
+  --atmo-green: 0,229,255;
+  --atmo-lime: 31,162,255;
+  --atmo-peach: 255,122,26;
+  --atmo-line: 31,162,255;
 }
 body.dark #app #trackerAtmosphere {
-  background:linear-gradient(145deg,#141b11 0%,#131a13 42%,#1d2016 100%);
-  --atmo-green:128,178,74;
-  --atmo-lime:179,226,96;
-  --atmo-peach:205,138,84;
-  --atmo-line:173,207,119;
+  background:linear-gradient(145deg,#0f1217 0%,#111318 42%,#161a22 100%);
+  --atmo-green: 0,229,255;
+  --atmo-lime: 31,162,255;
+  --atmo-peach: 255,122,26;
+  --atmo-line: 31,162,255;
 }
 #trackerAtmosphere .tracker-ribbon {
   position:absolute;
